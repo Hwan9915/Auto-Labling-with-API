@@ -32,3 +32,17 @@ def count_image_files(directory_path):
     file_count = sum(os.path.isfile(os.path.join(directory_path, entry)) for entry in entries)
     
     return file_count
+
+def formatting_data(directory_path):
+    files = os.listdir(directory_path)
+    
+    count = count_image_files(directory_path)
+    
+    
+    for filename in files:
+        if filename.endswith(".jpg"):  # PNG 파일만 처리
+            new_filename = f"{count}.png"
+            os.rename(os.path.join(directory_path, filename), os.path.join(directory_path, new_filename))
+            count += 1
+
+    print("파일 이름 변경 완료!")
