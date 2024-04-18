@@ -9,8 +9,13 @@ from utils import data
 # print(generated_text)
 
 if __name__ == "__main__":
-    data_directory_path = "C:\\Users\\hg\\github\\Auto-Labling-with-API\\data"
+    data_directory_path = "C:\\Users\\Auto-Labling-with-API\\data"
     data_len = data.count_image_files(data_directory_path)
+    
+    ## 파일 이름 n.png 형식으로 바꾸기
+    formatting = False
+    if formatting:
+        data.formatting_data(data_directory_path)
     
     text = "Describe this image"
     
