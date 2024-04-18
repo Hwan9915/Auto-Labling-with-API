@@ -1,0 +1,3 @@
+"google-generativeai"
+openai==1.21.2
+pillow==10.3.0
