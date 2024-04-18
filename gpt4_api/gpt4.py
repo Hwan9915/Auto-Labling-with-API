@@ -62,5 +62,5 @@ class GPTAPI:
         if response.status_code == 200:
             return response.json()['choices'][0]['message']['content']
         else:
-            return "Error: Failed to generate text"
+            return False
 

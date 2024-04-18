@@ -32,5 +32,5 @@ class GeminiAPI:
         if response._done:
             return response.text
         else:
-            return "Error: Failed to generate text"
+            return False
 
